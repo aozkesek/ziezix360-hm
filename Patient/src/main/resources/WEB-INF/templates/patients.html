@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+
+<head>
+    <title>Patients</title>
+</head>
+
+<body>
+<!-- /* Content of this page will be decorated by the elements of layout.html (task/layout) */ -->
+<div layout:fragment="content">
+
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead >
+                <tr>
+                    <th scope="col"><a class="btn btn-primary" th:href="@{/patients/new}">Add</a></th>
+                    <th scope="col">National ID</th>
+                    <th scope="col">Insurance Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Surname</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Place of Birth</th>
+                    <th scope="col">Father Name</th>
+                    <th scope="col">Mother Name</th>
+                </tr>
+                </thead>
+
+                <tbody >
+                <tr th:each="p : ${patients}">
+                    <th scope="row"><a th:href="@{'/patients/patient/'+${p.Id}}">Edit</a></th>
+                    <td th:text="${p.NationalId}">&nbsp</td>
+                    <td th:text="${p.InsuranceNumber}">&nbsp</td>
+                    <td th:text="${p.Name}">&nbsp</td>
+                    <td th:text="${p.Surname}">&nbsp</td>
+                    <td th:text="${p.DateofBirth}">&nbsp</td>
+                    <td th:text="${p.PlaceofBirth}">&nbsp</td>
+                    <td th:text="${p.FatherName}">&nbsp</td>
+                    <td th:text="${p.MotherName}">&nbsp</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

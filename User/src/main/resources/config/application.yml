@@ -1,0 +1,17 @@
+userdb:
+  name: hm
+  user: ZIEZIX
+  pass: ZZ360
+  cstr: jdbc:hsqldb:hsql://localhost/
+
+server:
+  port: 8090
+
+logging:
+  level:
+    root: WARN
+    org:
+      springframework: DEBUG
+
+
+

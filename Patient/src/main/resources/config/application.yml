@@ -1,0 +1,17 @@
+userdb:
+  name: hm
+  user: ZIEZIX
+  pass: ZZ360
+  cstr: jdbc:hsqldb:hsql://localhost/
+
+webclienturls:
+  user: http://localhost:8090/user/
+
+logging:
+  level:
+    root: WARN
+    org:
+      springframework: DEBUG
+      hibernate: ERROR
+      thymeleaf: DEBUG
+

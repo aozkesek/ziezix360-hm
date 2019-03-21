@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+
+<head>
+    <title>Patient Form</title>
+</head>
+
+<body>
+
+<div layout:fragment="content">
+
+    <form th:action="${'/patients/'+addOrUpdate}" method="post" th:object="${patient}">
+
+        <div class="container" >
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="nationalId">National ID</label>
+                        <input class="form-control" type="number" th:value="*{NationalId}" name="nationalId" id="nationalId"/>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="insuranceNumber">Insurance Number</label>
+                        <input class="form-control" type="number" th:value="*{InsuranceNumber}" name="insuranceNumber" id="insuranceNumber"/>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input class="form-control" type="text" th:value="*{Name}" name="name" id="name"/>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="surname">Surname</label>
+                        <input class="form-control" type="text" th:value="*{Surname}" name="surname" id="surname"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth</label>
+                        <input class="form-control" type="text" th:value="*{DateofBirth}" name="dateOfBirth" id="dateOfBirth"/>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="placeOfBirth">Place of Birth</label>
+                        <input class="form-control" type="text" th:value="*{PlaceofBirth}" name="placeofBirth" id="placeOfBirth"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="fatherName">Father Name</label>
+                        <input class="form-control" type="text" th:value="*{FatherName}" name="fatherName" id="fatherName"/>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label htmlFor="motherName">Mother Name</label>
+                        <input class="form-control" type="text" th:value="*{MotherName}" name="motherName" id="motherName" size="64"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-sm justify-content-md-center">
+                    <div class="btn-group" role="group">
+                        <input type="submit" class="btn btn-primary" value="Submit"/>
+                        <a class="btn btn-secondary" href="/patients">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input th:value="${id}" name="id" hidden>
+
+    </form>
+
+</div>
+</body>
+</html>

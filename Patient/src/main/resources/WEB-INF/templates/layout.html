@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">ZieZix360 - Hospital Management</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+
+    <script type="text/javascript" src="/static/jquery-3.0.0.slim.min.js"></script>
+    <script type="text/javascript" src="/static/popper.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="/static/bootstrap/bootstrap.css" />
+
+
+</head>
+
+
+<body>
+<!--/* Standard layout can be mixed with Layout Dialect */-->
+<div class="container">
+
+<div th:include="header :: header" class="container"></div>
+
+<div class="container">
+
+    <section layout:fragment="content">
+
+    </section>
+
+</div>
+
+<div th:include="footer :: footer" class="container"></div>
+</div>
+
+</body>
+</html>
