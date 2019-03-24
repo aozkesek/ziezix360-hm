@@ -14,7 +14,8 @@ public class PatientWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         httpSecurity
                 .authorizeRequests()
-                    .antMatchers("/static/**", "/favicon.ico", "/error", "/logout", "/signin", "/signin-error")
+                    .antMatchers("/static/**", "/favicon.ico",
+                            "/loggedout", "/signin", "/signin-error")
                     .permitAll()
                     .anyRequest().authenticated()
 

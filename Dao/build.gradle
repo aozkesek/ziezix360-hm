@@ -14,7 +14,10 @@ plugins {
 }
 
 group = 'com.ziezix360hm'
-version = '0.0.7'
+version = '0.0.8'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -45,7 +48,7 @@ publishing {
     repositories {
         maven {
             name = 'ziezix360hm'
-            url = "file:///Users/ahmetozkesek/workspaces/repo"
+            url = "file:///home/ahmet/workspaces/repo"
         }
     }
 }

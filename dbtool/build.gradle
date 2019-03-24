@@ -36,3 +36,5 @@ dependencies {
 
 // Define the main class for the application
 mainClassName = 'org.ziezix360.hm.App'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'

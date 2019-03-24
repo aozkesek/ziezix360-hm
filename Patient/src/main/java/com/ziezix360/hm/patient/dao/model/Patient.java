@@ -28,6 +28,17 @@ public class Patient extends DaoModel {
     @Column(name = "MOTHER_NAME")
     String motherName;
 
+    public Patient() {}
+
+    public Patient(String name, String surname) {
+        setName(name);
+        setSurname(surname);
+    }
+
+    public Patient(int nationalId) {
+        setNationalId(nationalId);
+    }
+
     public int getId() {
         return id;
     }

@@ -4,8 +4,12 @@
 # Ignore Gradle build output directory
 .idea
 
+dbdata
 build
 gradle
 out
 
 hm-patient-react
+
+*.iml
+

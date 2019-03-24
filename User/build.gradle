@@ -21,7 +21,7 @@ repositories {
     mavenCentral()
     maven {
         name='ziezix360hm'
-        url="file://Users/ahmetozkesek/workspaces/repo"
+        url="file:///home/ahmet/workspaces/repo"
     }
 }
 
@@ -34,10 +34,12 @@ dependencies {
     compile 'org.hibernate:hibernate-core:5.4.1.Final'
     
     //
-    compile 'com.ziezix360hm:Dao:0.0.7'
+    compile 'com.ziezix360hm:Dao:0.0.8'
 
     testImplementation 'junit:junit:4.12'
 }
 
 // Define the main class for the application
 mainClassName = 'com.ziezix360.hm.user.UserApp'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'

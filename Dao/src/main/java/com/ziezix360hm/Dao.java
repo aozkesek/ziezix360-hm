@@ -11,9 +11,11 @@ public interface Dao<T extends DaoModel> {
     T update(T model);
     T read(T model);
     T delete(T model);
+
     List<T> list();
     List<T> query(String name, T model);
 
-    Predicate buildCriteriaQuery(CriteriaBuilder criteriaBuilder, Root<T> root, String name, T model);
+    Predicate buildCriteriaQuery(CriteriaBuilder criteriaBuilder,
+                                 Root<T> root, String name, T model);
     Class getModelClass();
 }

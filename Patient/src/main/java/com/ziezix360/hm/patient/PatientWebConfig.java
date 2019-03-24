@@ -45,7 +45,7 @@ public class PatientWebConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/WEB-INF/static/")
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:WEB-INF/static/")
                 .setCachePeriod(31556926);
     }
 
@@ -88,7 +88,7 @@ public class PatientWebConfig implements WebMvcConfigurer {
     public SpringResourceTemplateResolver templateResolver(){
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(this.applicationContext);
-        templateResolver.setPrefix("classpath:/WEB-INF/templates/");
+        templateResolver.setPrefix("classpath:WEB-INF/templates");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCacheable(true);

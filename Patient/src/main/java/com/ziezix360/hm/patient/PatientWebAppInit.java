@@ -10,7 +10,7 @@ public class PatientWebAppInit extends AbstractAnnotationConfigDispatcherServlet
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[] { PatientWebConfig.class };
+        return new Class[] { PatientWebConfig.class, PatientWebSecurityConfig.class };
     }
 
     @Override

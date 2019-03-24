@@ -15,7 +15,6 @@ public class PatientIndex {
     @Autowired
     PatientDao patientDao;
 
-
     @RequestMapping("/signin")
     public String signIn() {
         return "/signin";
@@ -40,7 +39,7 @@ public class PatientIndex {
     public String patientHome(Model model) {
         model.addAttribute("addOrUpdate", "");
         model.addAttribute("patients", patientDao.list());
-        return "patients";
+        return "/patients";
     }
 
     @RequestMapping("/patients/patient/{id}")
@@ -50,14 +49,14 @@ public class PatientIndex {
         patient = patientDao.read(patient);
         model.addAttribute("patient", patient);
         model.addAttribute("addOrUpdate", "update");
-        return "patient";
+        return "/patient";
     }
 
     @RequestMapping("/patients/new")
     String patientNew(Model model) {
         model.addAttribute("addOrUpdate", "add");
         model.addAttribute("patient", new Patient());
-        return "patient";
+        return "/patient";
     }
 
     @PostMapping("/patients/update")
