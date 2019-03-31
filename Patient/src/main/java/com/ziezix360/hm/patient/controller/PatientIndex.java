@@ -52,6 +52,15 @@ public class PatientIndex {
         return "/patient";
     }
 
+    @RequestMapping("/patients/patient/{id}/bio")
+    String patientBio(@PathVariable int id, Model model) {
+        Patient patient = new Patient();
+        patient.setId(id);
+        patient = patientDao.read(patient);
+        model.addAttribute("patient", patient);
+        return "/patientbio";
+    }
+
     @RequestMapping("/patients/new")
     String patientNew(Model model) {
         model.addAttribute("addOrUpdate", "add");

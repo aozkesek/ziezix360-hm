@@ -7,6 +7,8 @@
 
 <head>
     <title>Patient Form</title>
+
+    <script src="/static/bio.js"></script>
 </head>
 
 <body>
@@ -48,28 +50,13 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="form-group">
-                        <label for="dateOfBirth">Date of Birth</label>
-                        <input class="form-control" type="text" th:value="*{DateofBirth}" name="dateOfBirth" id="dateOfBirth"/>
+                        <input class="btn btn-primary" type="button" value="Preview" onclick="start_preview();"/>
+                        <input class="btn btn-info" type="button" value="Take Photo" onclick="take_photo();"/>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="form-group">
-                        <label for="placeOfBirth">Place of Birth</label>
-                        <input class="form-control" type="text" th:value="*{PlaceofBirth}" name="placeofBirth" id="placeOfBirth"/>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm">
-                    <div class="form-group">
-                        <label for="fatherName">Father Name</label>
-                        <input class="form-control" type="text" th:value="*{FatherName}" name="fatherName" id="fatherName"/>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="form-group">
-                        <label htmlFor="motherName">Mother Name</label>
-                        <input class="form-control" type="text" th:value="*{MotherName}" name="motherName" id="motherName" size="64"/>
+                        <img src="" width="640" height="480" id="bioImage">
                     </div>
                 </div>
             </div>
@@ -78,13 +65,12 @@
                     <div class="btn-group" role="group">
                         <input type="submit" class="btn btn-primary" value="Submit"/>
                         <a class="btn btn-secondary" href="/patients">Back</a>
-                        <a class="btn btn-info" th:href="@{'/patients/patient/'+*{Id}+'/bio'}">Biometric</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <input th:value="*{id}" name="id" hidden>
+        <input th:value="${id}" name="id" hidden>
 
     </form>
 
