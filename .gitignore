@@ -13,3 +13,9 @@ hm-patient-react
 
 *.iml
 
+.vs
+bin/
+obj/
+packages/
+*/Debug/
+Debug/
