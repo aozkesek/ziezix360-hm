@@ -41,18 +41,32 @@ ZieZix360 - Hospital Management PoC - Milestone-2
         This application is an User Interface for Camera and Figerprint devices.  
         
 
-2. Copy The Services on Server;
+2. Copy The Services on the server;
 
 2.1. Open https://github.com/aozkesek/ziezix360-hm/tree/master/install .
+
 2.2. Click on dbtool.zip, and click Download
+2.2.1. Extract downloaded file
+2.2.2. Goto https://raw.githubusercontent.com/aozkesek/ziezix360-hm/master/install/dbtool.bat page.
+2.2.3. Select all, then copy
+2.2.4. Run Notepad, then open dbtool\bin\dbtool.bat
+2.2.5. Select all, delete, then paste
+2.2.6. Save the changes  
+
 2.3. Back to the previous page, click on User.zip, and click Download
+2.3.1. Extract downloaded file
+
 2.4. Back to the previous page, click on Patient.zip, and click Download
-2.5. Open ZIP files and extract them.
+2.4.1. Goto https://raw.githubusercontent.com/aozkesek/ziezix360-hm/master/install/Patient.bat page. 
+2.4.2. Select all, then copy
+2.4.3. Run Notepad, then open dbtool\bin\dbtool.bat
+2.4.4. Select all, delete, then paste
+2.4.5. Save the changes  
 
 2.3. dbtool
 2.3.1. Open a new command prompt window
 2.3.2. Change directory and enter the dbtool\ folder where you extract the zip file.
-2.3.3. run dbtool.bat
+2.3.3. run bin\dbtool.bat
 
 2.4. User
 2.4.1. Open a new command prompt window
@@ -63,28 +77,24 @@ ZieZix360 - Hospital Management PoC - Milestone-2
 2.5.1. Open a new command prompt window
 2.5.2. Change directory and enter the Patient folder where you extract the zip file.
 2.5.3. run bin\Patient.bat
-2.5.4. If you get an error like "... too long" then;
-2.5.4.1. Open https://github.com/aozkesek/ziezix360-hm/tree/master/install folder.
-2.5.4.2. Click the Patient.bat, and click the Raw
-2.5.4.3. Selct all text, then copy it
-2.5.4.4. Open bin\Patient.bat with Notepad.exe
-2.5.4.5. Select all, delete, then Paste and Save
-2.5.4.6. run bin\Patient.bat again
 
 3. Copy The Biometric Application on Client PC;
 
-3.1. Open https://github.com/aozkesek/ziezix360-hm/tree/master/install folder.
-3.2. Click on client-app.zip, and click Download
-3.3. Open client-app.zip and extract the files.
-3.4. Run WFApp1.exe
+3.1. Open https://github.com/aozkesek/ziezix360-hm/blob/master/install/ziezix360-hm-bio.zip page.
+3.2. Click Download
+3.3. Extract the files into a new folder.
+3.4. Run WFApp1.exe as Local Administrator.  (This is only for PoC)
 3.5. Run a web browser application
 3.6. Open http://<ServerIPorHostName>:8080/ 
 3.7. Login with user AHMOZK password AB12 or user PAUJUS password CD34.
 3.8. Click Add button to create a new patient
-3.9. Click Edit link to update a patient
+3.9. Click Edit link to update a patient through Submit
 3.10. Click Biometric on a patient page
-3.11. Click Preview button
-3.12. Click Take Photo button to save the picture.  The picture will be kept 
+3.11. Click Preview button, this will refresh the picture on the page in every 3 second
+3.12. Click Take Photo button to shoot the photo.  The picture will be kept 
         under same folder inside temppreviewpictures.  We will not upload and  
         download the picture on PoC.
-
+1.13. Click Take Fingerprint button, then bring ZieZix360 - Hospital Management - Biometric 
+		application window in front, (select the application by pressing Alt + Tab keys)
+1.14. Swipe your finger until you see the fingerprint on the browser page, 
+		(this operation is needed more then one swipe action)
