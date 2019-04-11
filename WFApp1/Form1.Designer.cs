@@ -16,6 +16,10 @@
             if (disposing && (components != null))
             {
                 components.Dispose();
+                                _httlListenerTask.Dispose();
+                                _httpListener.Stop();
+                                _httpListener.Close();
+                                _videoCapture.Dispose();
             }
             base.Dispose(disposing);
         }

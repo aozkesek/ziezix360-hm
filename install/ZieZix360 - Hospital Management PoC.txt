@@ -1,0 +1,90 @@
+
+ZieZix360 - Hospital Management PoC - Milestone-2
+
+1. Prerequsites;
+
+1.1. A Server;
+
+        We can use a physical or virtual machine that has;
+        - 4 GB RAM, 
+        - 60GB HDD (both WinOS and our services) 
+        - 2 cores processor,
+        - Windows Server OS,
+        - JRE version 8+
+         
+1.1.1. dbtool
+        This module is a relational database service.  It uses HSQLDB that an
+        embedded sql server written in java.  We will use this db-service only 
+        for PoC phase.  
+
+1.1.2. User 
+        This module is a microservice and responsible for authentication and 
+        authorization. 
+
+1.1.3. Patient
+        This module is a microservice and includes both patient services and 
+        it's user interface.
+        
+1.2. A Client PC; 
+
+        We need at least;
+        - 1 GB free HDD 
+        - 4 GB RAM
+        - Windows 10 Professional (or Enterprise)
+        - A web browser
+        - A Camera device attached (or embedded) 
+        - A Fingerprint device attched (or embedded)
+        - Windows Hello Signin with Fingerprint
+        - Localadmin user right (just for PoC)
+
+1.2.1. WFApp1 
+        This application is an User Interface for Camera and Figerprint devices.  
+        
+
+2. Copy The Services on Server;
+
+2.1. Open https://github.com/aozkesek/ziezix360-hm/tree/master/install .
+2.2. Click on dbtool.zip, and click Download
+2.3. Back to the previous page, click on User.zip, and click Download
+2.4. Back to the previous page, click on Patient.zip, and click Download
+2.5. Open ZIP files and extract them.
+
+2.3. dbtool
+2.3.1. Open a new command prompt window
+2.3.2. Change directory and enter the dbtool\ folder where you extract the zip file.
+2.3.3. run dbtool.bat
+
+2.4. User
+2.4.1. Open a new command prompt window
+2.4.2. Change directory and enter the User\ folder where you extract the zip file.
+2.4.3. run bin\User.bat
+
+2.5. Patient
+2.5.1. Open a new command prompt window
+2.5.2. Change directory and enter the Patient folder where you extract the zip file.
+2.5.3. run bin\Patient.bat
+2.5.4. If you get an error like "... too long" then;
+2.5.4.1. Open https://github.com/aozkesek/ziezix360-hm/tree/master/install folder.
+2.5.4.2. Click the Patient.bat, and click the Raw
+2.5.4.3. Selct all text, then copy it
+2.5.4.4. Open bin\Patient.bat with Notepad.exe
+2.5.4.5. Select all, delete, then Paste and Save
+2.5.4.6. run bin\Patient.bat again
+
+3. Copy The Biometric Application on Client PC;
+
+3.1. Open https://github.com/aozkesek/ziezix360-hm/tree/master/install folder.
+3.2. Click on client-app.zip, and click Download
+3.3. Open client-app.zip and extract the files.
+3.4. Run WFApp1.exe
+3.5. Run a web browser application
+3.6. Open http://<ServerIPorHostName>:8080/ 
+3.7. Login with user AHMOZK password AB12 or user PAUJUS password CD34.
+3.8. Click Add button to create a new patient
+3.9. Click Edit link to update a patient
+3.10. Click Biometric on a patient page
+3.11. Click Preview button
+3.12. Click Take Photo button to save the picture.  The picture will be kept 
+        under same folder inside temppreviewpictures.  We will not upload and  
+        download the picture on PoC.
+

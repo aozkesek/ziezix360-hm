@@ -19,3 +19,5 @@ obj/
 packages/
 */Debug/
 Debug/
+*/Release/
+Release/
