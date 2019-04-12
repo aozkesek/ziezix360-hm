@@ -20,6 +20,10 @@ public class PatientIndex {
         return "/signin";
     }
 
+    /*
+    * user authentication & authorization
+    *
+    * */
     @RequestMapping("/signin-error")
     public String signInError() {
         return "/signin-error";
@@ -35,6 +39,9 @@ public class PatientIndex {
         return "/loggedout";
     }
 
+    /*
+    * patient
+    * */
     @RequestMapping({"/patients", "/"})
     public String patientHome(Model model) {
         model.addAttribute("addOrUpdate", "");

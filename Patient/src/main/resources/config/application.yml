@@ -4,6 +4,9 @@ userdb:
   pass: ZZ360
   cstr: jdbc:hsqldb:hsql://localhost/
 
+server:
+  port: 8070
+  
 webclienturls:
   user: http://localhost:8090/user/
 
