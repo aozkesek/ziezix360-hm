@@ -7,7 +7,6 @@ using System.IO;
 using System.Drawing.Imaging;
 
 using Emgu.CV;
-using Emgu.CV.CvEnum;
 using System.Runtime.InteropServices;
 using System.Threading;
 
@@ -36,7 +35,7 @@ namespace WFApp1
                         if (!Directory.Exists(_baseDir))
                                 Directory.CreateDirectory(_baseDir);
 
-                        _videoCapture = new VideoCapture(CaptureType.Any);
+                        _videoCapture = new VideoCapture();
 
                         InitializeHttpListener();
             
