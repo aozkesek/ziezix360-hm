@@ -256,7 +256,7 @@ void write_image_to_file(PBYTE image_buffer, int image_w,
         const ULONG image_size, int sequence) {
         using namespace std;
         string ct =
-                "C:\\Users\\Ahmet USER\\source\\repos\\ziezix360-hmb\\WFApp3\\Debug\\captured_template_";
+                "captured_template_";
         ct += ((char)(sequence + '0'));
         ct += ".bmp";
 
