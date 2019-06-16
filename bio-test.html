@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<script src="websocket-test.js" ></script>
+<script src="bio-test.js" ></script>
 </head>
 
 
@@ -11,11 +11,7 @@
 <table>
 <tr>
         <td>
-                <input type="button" valign="top" id="socketConnect" value="Connect" onclick="localhost_connect();"/>
-                <input type="button" id="socketDisconnect" value="Disconnect" onclick="localhost_disconnect();"/>
-        </td>
-
-        <td>
+                <input type="button" valign="top" id="socketConnect" value="Connect to Camera" onclick="localhost_connect();"/>
                 <input type="button" valign="top" id="takePicture" value="Take Picture" onclick="take_picture();"/>
                 <input type="button" valign="top" id="takePicture" value="Take Fingerprint" onclick="take_fingerprint();"/>
         </td>
@@ -23,11 +19,8 @@
 
 <tr>
         <td>
-                <span><img id="captureImage" src=""></span>
+                <span><img id="capturedImage" src=""></span>
         </td>
-        <td>
-                <span><img id="previewImage" src=""></span>     
-       </td>
 </tr>
 
 </table>

@@ -1,14 +1,15 @@
 var capture_interval = null;
 
 function take_picture() {
+	localhost_disconnect();
 	var now = new Date();
-	document.getElementById('previewImage').src = 
+	document.getElementById('capturedImage').src = 
 		'http://localhost:8081/capture/camera/preview/?' + now.getTime();
 }
 
 function capture_next_frame() {
 	var now = new Date();
-	document.getElementById('captureImage').src = 
+	document.getElementById('capturedImage').src = 
 		'http://localhost:8081/capture/camera/?' + now.getTime();
 }
 
@@ -21,12 +22,13 @@ function localhost_connect() {
 function localhost_disconnect() {
 	window.clearInterval(capture_interval);
 	capture_interval = null;
-	document.getElementById('captureImage').src = '';
+	document.getElementById('capturedImage').src = '';
 }
 
 function take_fingerprint() {
+	localhost_disconnect();
 	var now = new Date();
-	document.getElementById('previewImage').src = '';
-	document.getElementById('previewImage').src = 
+	document.getElementById('capturedImage').src = '';
+	document.getElementById('capturedImage').src = 
 		'http://localhost:8081/capture/fingerprint/?' + now.getTime();	
 }
